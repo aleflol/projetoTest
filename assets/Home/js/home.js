@@ -14,7 +14,6 @@ function clickChe() {
 
 	})
 
-
 };
 
 
@@ -48,18 +47,14 @@ function clickAdicionar(){
 	
 }
 
-
-
 function addValor(){
 
 	var tipo = $('.linha .checado').val();
 
-	
 	var inputValue = $('.lateral .valor').val();
 
-	
-
 	if(inputValue){
+
 		if( tipo == 'deposito'){
 			addLinha( tipo, inputValue);
 		}
@@ -67,17 +62,11 @@ function addValor(){
 			addLinha( tipo, inputValue);
 		}
 
-
 	}else{
 		$('.msg').addClass('erro').html('Por favor adicione um Valor').stop(true,true).fadeIn();
-
 		setTimeout(function(){ $('.msg').stop(true,true).fadeOut(); }, 3000);
 		setTimeout(function(){ $('.msg').removeClass('erro'); }, 3400);
 	}
-	
-
-	
-
 }
 
 function addLinha(tipo , valor) {
@@ -105,7 +94,7 @@ function addLinha(tipo , valor) {
 		   
 		}
 
-	$('#ctTable').append('<tr class="'+$nameClass+'"> <td >'+$nameLabel+'</td>  <td class="pSoma" data-pSoma="'+valorNovo+'" >R$'+ valorOrin+'</td><td class="remover">remover</td>/tr>')
+	$('#ctTable').append('<tr class="'+$nameClass+'"> <td >'+$nameLabel+'</td>  <td class="pSoma" data-pSoma="'+valorNovo+'" >R$'+ valorOrin+'</td><td class="remover"><span class="remover">remover</span></td>/tr>')
 
 	somaTotal();
 }
@@ -120,8 +109,10 @@ function clickRemove() {
 
 function somaTotal() {
 	var $pSoma = $('#ctTable .pSoma');
+	
 	$('.ct-List').addClass('visible').removeClass('offVisible');
-		$('.semValor').removeClass('visible').addClass('offVisible');
+	$('.semValor').removeClass('visible').addClass('offVisible');
+	
 	if($pSoma.length){		
 
 		total = 0.00;
@@ -130,22 +121,16 @@ function somaTotal() {
 
 			var vlPego = $this.attr('data-pSoma');
 			
-			
 			vlPego = parseFloat(vlPego);
 
 			total = parseFloat(total);
 
 			total = (total + vlPego);
-			
-			
+				
 		});
-
-
-		
 
 		$('#total').val(total.toFixed(2));
 		
-
 		if( total > 0){
 			$('.faixaTotal').addClass('positivo').removeClass('negativo');
 		}else{
@@ -153,14 +138,14 @@ function somaTotal() {
 		}
 
 		$(function() {
-		  var maxLength = '-0.000.000,00'.length;
-		  
-		  $("#total").maskMoney({
-		    allowNegative: true,
-		    thousands: '.',
-		    decimal: ',',
-		    affixesStay: false
-		  }).attr('maxlength', maxLength).trigger('mask.maskMoney');
+			  var maxLength = '-0.000.000,00'.length;
+			  
+			  $("#total").maskMoney({
+				    allowNegative: true,
+				    thousands: '.',
+				    decimal: ',',
+				    affixesStay: false
+			  }).attr('maxlength', maxLength).trigger('mask.maskMoney');
 		});
 	}
 	else{
@@ -170,18 +155,16 @@ function somaTotal() {
 	}
 }
 
-$( ".valor" ).on( "keydown", function(event) {
+	$( ".valor" ).on( "keydown", function(event) {
       if(event.which == 13){
       	$('.btnEnviar').trigger("click");
       } 
          
     });
 
-// $(".valor").maskMoney({showSymbol:true, symbol:'R$ ', thousands:'', decimal:'.', symbolStay: true});
+ $(".valor").maskMoney({showSymbol:true, symbol:'R$ ', thousands:'.', decimal:',', symbolStay: true});
 
-
-
- $('.valor').mask('000.000.000.000.000,00', {reverse: true});
+//$('.valor').mask('000.000.000.000.000,00', {reverse: true});
 
 clickRemove();
 somaTotal();

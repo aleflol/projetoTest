@@ -1,61 +1,19 @@
 html , body { font-family: 'Open Sans';  }
 
+header{	border-bottom: 1px solid #419ab8; width: 100%; }
 
-header{
-	border-bottom: 1px solid #419ab8;
-	width: 100%;
+.logo{	width: 82px;  background-image: url(../img/logo.png); height: 58px; background-size: cover;  background-position: center; margin: 0 auto; }
 
-}
+.saudacao, .siteOf{ font-size: 14px; font-weight: 100; color: #419ab8; margin-left: -4px; line-height: 58px; }
 
+.link:hover{text-decoration: none; color : #ff8f3d;}
+.siteOf{ text-align: right; }
 
-.logo{
-	width: 82px;
-    background-image: url(../img/logo.png);
-    height: 58px;
-    background-size: cover;
-    background-position: center;
-    margin: 0 auto;
-}
+.lateral{ 	background: #f5f5f5; min-height: 91.1vh; }
 
-.saudacao, .siteOf{ 
-	font-size: 14px;
-    font-weight: 100;
-    color: #419ab8;
-    margin-left: -4px;
-    line-height: 58px;
- }
+.lateral .title{ font-weight: 100;margin-top: 11%; margin-bottom: 45px; font-size: 34px; text-align: center;letter-spacing: -3px; font-style: italic; color: #ff8f3d; line-height: 30px;}
 
- .siteOf{
- 	text-align: right;
- }
-
- .lateral{
- 	background: #f5f5f5;
- 	min-height: 91.1vh;
- }
-
-
-.lateral .title{
-	    font-weight: 100;
-    margin-top: 11%;
-    margin-bottom: 45px;
-    font-size: 34px;
-    text-align: center;
-    letter-spacing: -3px;
-    font-style: italic;
-    color: #ff8f3d;
-    line-height: 30px;
-}
-
- .lateral .valor{  
-    margin-top: 10px;
-    display: block;
-    width: 100%;
-    padding: 4px 10px;
-    border: none;
-    border-radius: 1px; 
-    border: 1px solid #419ab8;
-}
+.lateral .valor{   margin-top: 10px;display: block; width: 100%; padding: 4px 10px; border: none; border-radius: 1px; border: 1px solid #419ab8; }
 
 .lateral .linha{ display: inline-block; text-align: center; width: 48%;   }
 
@@ -63,46 +21,28 @@ header{
 
 .lateral .linha input { margin-top: 0px; display: inline-block; line-height: 5px;  position: relative; top: 1px; }
 
-.lateral  .btnEnviar{ cursor: pointer; background: #fff; color : #419ab8; width : 150px; margin: 0 auto; margin-top: 15px; border-radius: 2px;
-text-align: center;   padding: 5px 0px;}
+.lateral  .btnEnviar{ cursor: pointer; background: #fff; color : #419ab8; width : 150px; margin: 0 auto; margin-top: 15px; border-radius: 2px; text-align: center;   padding: 5px 0px;}
+
 .lateral  .btnEnviar:hover{ background : #41b877; color : #FFF; }
-
-
 
 .conteudo .letraMaior{ font-size: 50px;  font-weight: 100;  font-style: italic;  color: #999;  letter-spacing: -3px;  text-align: center;}
 
+.msg.erro{background: #f15850;margin-bottom:   15px;color: #fff; padding: 6px 15px; text-align: center; text-transform: uppercase;font-size: 10px; font-style: italic; }
 
-.msg.erro{
-	background: #f15850;
-	margin-bottom:   15px;
-	color: #fff;
-    padding: 6px 15px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 10px;
-    font-style: italic;
-}
+.conteudo  .titleLista{	font-size:  32px; text-transform: uppercase; margin-top: 20px; margin-bottom: 25px; }
 
+.conteudo span.remover{ background: #f5f5f5; border-radius: 4px; color: #f28e8e; padding: 4px 20px; display: inline-block; font-size: 7px; text-transform: uppercase; font-weight: 700; cursor: pointer;}
 
-.conteudo  .titleLista{
-	font-size:  32px;
-	text-transform: uppercase;
-    margin-top: 20px;
-    margin-bottom: 25px;
-}
+.conteudo span.remover:hover{ background: #f28e8e; border-radius: 4px; color: #f5f5f5; }
 
-
-.faixaTotal{
-	font-size: 40px;  font-weight: 100;  font-style: italic;  color: #FFF;  letter-spacing: -3px;  text-align: center; background: #2494f2;
-	padding: 10px;
-}
-
+.faixaTotal{ font-size: 40px;  font-weight: 100;  font-style: italic;  color: #FFF;  letter-spacing: -3px;  text-align: center; background: #2494f2; padding: 10px; }
 
 .faixaTotal.positivo{ background: #5fca89; }
-.faixaTotal.negativo{ background: #ff9393; }
 
+.faixaTotal.negativo{ background: #ff9393; }
 
 #total{ background: none;    border: none; }
 
 .visible { display: block !important; }
+
 .offVisible{display: none !important;}

@@ -30,7 +30,7 @@
 				</div>
 				<div class="col-sm-5 siteOf">
 					
-				Conheça nosso site 
+				<a class="link" href="http://s2it.com.br/" target="_blank">Conheça nosso site </a>
 
 				</div>
 
@@ -56,7 +56,7 @@
 			</div>
 			
 			<br/>
-			<input type="text" class="valor" name="valor" placeholder="Valor" value="" />
+			<input type="text" class="valor" name="valor" placeholder="Valor" value="" maxlength="11" />
 
 
 			<div class="btnEnviar"> Depositar </div>
@@ -75,7 +75,7 @@
 				<div class="faixaTotal ">
 
 					<span> Seu saldo é de R$</span> 
-					<input type="text"  name="" id='total' disabled="" value="" /> 
+					<input type="text"  name="" id='total' disabled="" value=""  /> 
 
 				</div>
 
